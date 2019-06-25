@@ -14,6 +14,24 @@ TextureImporter:
   - first:
       213: -8862585002054770944
     second: groundsheet_3
+  - first:
+      213: -1099742432823642426
+    second: groundsheet_4
+  - first:
+      213: -8480998387042330360
+    second: groundsheet_5
+  - first:
+      213: -678710917341118889
+    second: groundsheet_6
+  - first:
+      213: 3661200792328349433
+    second: groundsheet_7
+  - first:
+      213: 3875691101116100388
+    second: groundsheet_8
+  - first:
+      213: 5540442572415406873
+    second: groundsheet_9
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -111,7 +129,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
+        y: 64
         width: 32
         height: 32
       alignment: 0
@@ -121,7 +139,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9ed5354cd2fd7b949a48b61014d0bab1
+      spriteID: 6c1b1a01a38ff804d9beec7b8fd6f686
       internalID: 1232907609321312284
       vertices: []
       indices: 
@@ -132,17 +150,24 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 32
-        y: 0
+        y: 64
         width: 32
         height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
+      outline:
+      - - {x: -14, y: 16}
+        - {x: -14, y: 10}
+        - {x: -14, y: -16}
+        - {x: -14, y: -16}
+        - {x: 12, y: -16}
+        - {x: 12, y: 11}
+        - {x: 12, y: 16}
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 74bd337a246de56498890aa51c0d4c36
+      spriteID: ba918e0de0d1e6249b95b22a4b116bf6
       internalID: 1128207225211213988
       vertices: []
       indices: 
@@ -153,17 +178,23 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 64
-        y: 0
+        y: 64
         width: 32
         height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
+      outline:
+      - - {x: -4, y: 10}
+        - {x: -16, y: -4}
+        - {x: -16, y: -16}
+        - {x: 16, y: -16}
+        - {x: 16, y: -9}
+        - {x: 5, y: 10}
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e1a37c952e1a8a14893d4e5cebaba5c9
+      spriteID: 32d8b7b99964af94daa054d28987d4dd
       internalID: -1313739724456789621
       vertices: []
       indices: 
@@ -174,18 +205,183 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 96
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -4, y: 0}
+        - {x: -9, y: -5}
+        - {x: -14, y: -6}
+        - {x: -16, y: -10}
+        - {x: -16, y: -16}
+        - {x: 16, y: -16}
+        - {x: 16, y: -5}
+        - {x: 13, y: -1}
+        - {x: 7, y: 0}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 704edf93bd8cad74381f04a5180e6017
+      internalID: -8862585002054770944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: groundsheet_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -16, y: -15}
+        - {x: -16, y: -16}
+        - {x: 16, y: -16}
+        - {x: 16, y: 1}
+        - {x: 16, y: 1}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7602021134e63c48a3a12e5e35f3019
+      internalID: -1099742432823642426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: groundsheet_5
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 15, y: 16}
+        - {x: -16, y: 0}
+        - {x: -16, y: -16}
+        - {x: 16, y: -16}
+        - {x: 16, y: 16}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d26b2e48d3ea24e4c805449981060d36
+      internalID: -8480998387042330360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: groundsheet_6
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -16, y: 16}
+        - {x: -16, y: -16}
+        - {x: 16, y: -16}
+        - {x: 16, y: 1}
+        - {x: -15, y: 16}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d572920f6c92ea241a042d22ab699406
+      internalID: -678710917341118889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: groundsheet_7
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -16, y: 1}
+        - {x: -16, y: -16}
+        - {x: 16, y: -16}
+        - {x: 16, y: -15}
+        - {x: -16, y: 1}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06494ba5e862a6249a1809709049941a
+      internalID: 3661200792328349433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: groundsheet_8
+      rect:
+        serializedVersion: 2
+        x: 0
         y: 0
         width: 32
         height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
+      outline:
+      - - {x: 15, y: 16}
+        - {x: -16, y: -15}
+        - {x: -16, y: -16}
+        - {x: 16, y: -16}
+        - {x: 16, y: 16}
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d6cfe246f438ff444a1fa95c00b008ef
-      internalID: -8862585002054770944
+      spriteID: 308db511b5238164f9c48e8b2e74af52
+      internalID: 3875691101116100388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: groundsheet_9
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -16, y: 16}
+        - {x: -16, y: -16}
+        - {x: 16, y: -16}
+        - {x: 16, y: -15}
+        - {x: -15, y: 16}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0af87abb198d7046a5bb0cf546a0cb8
+      internalID: 5540442572415406873
       vertices: []
       indices: 
       edges: []

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7923614881769532136}
   - component: {fileID: 3625042978691635818}
   - component: {fileID: 9187397078680015367}
+  - component: {fileID: 3431655726241611813}
   m_Layer: 0
   m_Name: DeathVolume
   m_TagString: Untagged
@@ -56,7 +57,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 50, y: 1}
+  m_Size: {x: 80, y: 1}
   m_EdgeRadius: 0
 --- !u!114 &9187397078680015367
 MonoBehaviour:
@@ -70,6 +71,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9027a714f034be4e932c71f314d571d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!61 &3431655726241611813
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1404497950980748528}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -1}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 80, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &3736659635341273432
 GameObject:
   m_ObjectHideFlags: 0
@@ -83,7 +110,7 @@ GameObject:
   - component: {fileID: 3736659635341273438}
   - component: {fileID: 3736659635341273436}
   - component: {fileID: 1989822237365551317}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bushes
   m_TagString: Bush
   m_Icon: {fileID: 0}
@@ -288,7 +315,7 @@ GameObject:
   - component: {fileID: 3736659635544238395}
   - component: {fileID: 3736659635544238393}
   - component: {fileID: 9121048190103284855}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Rocks
   m_TagString: Rock
   m_Icon: {fileID: 0}
@@ -459,7 +486,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3736659635772609193}
   - component: {fileID: 3736659635772609198}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Grid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -508,7 +535,7 @@ GameObject:
   - component: {fileID: 3736659635837650325}
   - component: {fileID: 3736659635837650324}
   - component: {fileID: 3736659635837650314}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2443,7 +2470,7 @@ GameObject:
   - component: {fileID: 3736659636449101273}
   - component: {fileID: 3736659636449101279}
   - component: {fileID: 7029169148265564472}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cactus
   m_TagString: Cactus
   m_Icon: {fileID: 0}
@@ -2685,7 +2712,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7748185800695533120}
   - component: {fileID: 6731634545533628429}
-  m_Layer: 8
+  - component: {fileID: 7072071723043309584}
+  m_Layer: 0
   m_Name: LevelTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2732,3 +2760,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 30}
   m_EdgeRadius: 0
+--- !u!114 &7072071723043309584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6817535733393102207}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cf165012fb2b8846855448de06f46e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  generator: {fileID: 0}
+  boundingBoxMask:
+    serializedVersion: 2
+    m_Bits: 256

@@ -7,6 +7,7 @@ TagManager:
   - Rock
   - Cactus
   - Bush
+  - BoundingBox
   layers:
   - Default
   - TransparentFX
@@ -17,7 +18,7 @@ TagManager:
   - 
   - 
   - LevelGen
-  - 
+  - Ground
   - 
   - 
   - 

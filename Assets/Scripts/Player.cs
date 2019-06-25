@@ -14,6 +14,7 @@ public class Player : MonoBehaviour
 
     public float speed;
     public float jumpHeight;
+    public float jumpShort;
     public float groundAccuracy;
 
     public bool alive = true;
@@ -22,6 +23,8 @@ public class Player : MonoBehaviour
 
     [SerializeField]
     bool isOnGround = true;
+    bool jump = false;
+    bool jumpCancel = false;
     [SerializeField]
     Vector2 velocity;
     // Start is called before the first frame update
@@ -49,17 +52,41 @@ public class Player : MonoBehaviour
     {
         velocity = rigidbody2D.velocity;
         CheckGround();
-        if (alive)
+        if(alive)
         {
-            if (Input.GetKeyDown(KeyCode.Space) && isOnGround == true)
+            if (Input.GetKeyDown(KeyCode.Space) && isOnGround)
             {
-                rigidbody2D.velocity = new Vector2(Input.GetAxis("Horizontal") + speed, jumpHeight);
+                jump = true;
             }
             else
             {
-                rigidbody2D.velocity = new Vector2(Input.GetAxis("Horizontal") + speed, rigidbody2D.velocity.y);
+                jump = false;
             }
+
+            if (Input.GetKeyUp(KeyCode.Space) && !isOnGround)     // Player stops pressing the button
+                jumpCancel = true;
             UpdateScore();
+        }
+    }
+    private void FixedUpdate()
+    {
+        rigidbody2D.velocity = new Vector2(Input.GetAxis("Horizontal") + speed, rigidbody2D.velocity.y);
+        if (jump)
+        {
+            rigidbody2D.velocity = new Vector2(rigidbody2D.velocity.x, jumpHeight);
+        }
+            
+        if (jumpCancel)
+        {
+            if (rigidbody2D.velocity.y > jumpShort)
+            {
+                rigidbody2D.velocity = new Vector2(rigidbody2D.velocity.x, jumpShort);
+            }
+            jumpCancel = false;
+        }
+        if(!alive)
+        {
+            rigidbody2D.velocity = new Vector2(0, -9.81f);
         }
     }
     void CheckGround()
@@ -92,6 +119,8 @@ public class Player : MonoBehaviour
 
     public void Die()
     {
+        isOnGround = true;
         alive = false;
+        animator.SetBool("Dead", true);
     }
 }
