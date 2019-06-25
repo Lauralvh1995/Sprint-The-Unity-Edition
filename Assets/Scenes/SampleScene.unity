@@ -178,10 +178,13 @@ MonoBehaviour:
   animator: {fileID: 1267946213}
   ScoreUI: {fileID: 1676369892}
   startPoint: {fileID: 1393308316}
+  groundMask:
+    serializedVersion: 2
+    m_Bits: 512
   speed: 6
   jumpHeight: 10
   jumpShort: 5
-  groundAccuracy: 0.2
+  groundAccuracy: 0.3
   alive: 1
   score: 0
   isOnGround: 0
@@ -408,6 +411,9 @@ MonoBehaviour:
   - {fileID: 2114954061911186543, guid: 9c00e45b8c82962429cfd4a1f87f0b5f, type: 3}
   - {fileID: 5360446425288872549, guid: 683ace5d580a65347a2aabd377553f80, type: 3}
   - {fileID: 1068106472271147949, guid: c2ad863061398334590aeb104244ab2c, type: 3}
+  - {fileID: 8029085448227121017, guid: 1de488c5f9ae2e2409453bc948b79f9c, type: 3}
+  - {fileID: 3258706886346618396, guid: 8e1b22541e7052446a36e938120446bd, type: 3}
+  - {fileID: 1290758312104509231, guid: f2a417a596bf87b48a558e9d2773fd40, type: 3}
   chunks: []
   chunkWidth: 28
   startChunk: {fileID: 45676693}
@@ -453,8 +459,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_AssetsPPU: 64
-  m_RefResolutionX: 1024
-  m_RefResolutionY: 768
+  m_RefResolutionX: 640
+  m_RefResolutionY: 480
   m_UpscaleRT: 0
   m_PixelSnapping: 0
   m_CropFrameX: 0
@@ -487,7 +493,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5.9872456
+  orthographic size: 6
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2

@@ -11,6 +11,7 @@ public class Player : MonoBehaviour
     public Animator animator;
     public GameObject ScoreUI;
     public GameObject startPoint;
+    public LayerMask groundMask;
 
     public float speed;
     public float jumpHeight;
@@ -91,14 +92,7 @@ public class Player : MonoBehaviour
     }
     void CheckGround()
     {
-        if (rigidbody2D.velocity.y > groundAccuracy || rigidbody2D.velocity.y < -groundAccuracy)
-        {
-            isOnGround = false;
-        }
-        else
-        {
-            isOnGround = true;
-        }
+        isOnGround = Physics2D.OverlapCircle(transform.position, 0.5f + groundAccuracy, groundMask);
     }
 
     void UpdateScore()

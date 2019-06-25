@@ -28,6 +28,7 @@ public class LevelGenerator : MonoBehaviour
         if(chunks.Count > 2)
         {
             Destroy(chunks[0].gameObject);
+            chunks.RemoveAt(0);
         }
     }
 }
