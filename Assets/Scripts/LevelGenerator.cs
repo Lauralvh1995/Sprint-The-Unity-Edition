@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LevelGenerator : MonoBehaviour
 {
@@ -30,5 +31,10 @@ public class LevelGenerator : MonoBehaviour
             Destroy(chunks[0].gameObject);
             chunks.RemoveAt(0);
         }
+    }
+    public void GoToTitle()
+    {
+        SceneManager.LoadScene("Title");
+        SceneManager.UnloadSceneAsync("Game");
     }
 }

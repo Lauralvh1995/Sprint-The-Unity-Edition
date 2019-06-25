@@ -10,6 +10,8 @@ public class Player : MonoBehaviour
     public Rigidbody2D rigidbody2D;
     public Animator animator;
     public GameObject ScoreUI;
+    public GameObject finalScore;
+    public GameObject GameOver;
     public GameObject startPoint;
     public LayerMask groundMask;
 
@@ -46,6 +48,7 @@ public class Player : MonoBehaviour
 
                 break;
         }
+        GameOver.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -98,7 +101,7 @@ public class Player : MonoBehaviour
     void UpdateScore()
     {
         score = Mathf.FloorToInt(transform.position.x - startPoint.transform.position.x);
-        ScoreUI.GetComponent<Text>().text = score.ToString();
+        ScoreUI.GetComponent<Text>().text = "Score  "+ score.ToString();
     }
 
     public void SetSpeed(float newSpeed)
@@ -116,5 +119,8 @@ public class Player : MonoBehaviour
         isOnGround = true;
         alive = false;
         animator.SetBool("Dead", true);
+        GameOver.gameObject.SetActive(true);
+        finalScore.GetComponent<Text>().text = "Final Score  " + score;
+        ScoreUI.gameObject.SetActive(false);
     }
 }
