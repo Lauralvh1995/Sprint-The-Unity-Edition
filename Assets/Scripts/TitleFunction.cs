@@ -7,8 +7,7 @@ public class TitleFunction : MonoBehaviour
 {
     public void StartGame()
     {
-        SceneManager.LoadScene("Game");
-        SceneManager.UnloadSceneAsync("Title");
+        SceneManager.LoadScene(1, LoadSceneMode.Single);
     }
     public void ExitGame()
     {

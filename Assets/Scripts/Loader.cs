@@ -9,6 +9,7 @@ public class Loader : MapEntity
     private void Start()
     {
         generator = FindObjectOfType<LevelGenerator>();
+        Debug.Log(generator.gameObject.name);
     }
     public override void OnTriggerEnter2D(Collider2D collision)
     {

@@ -68,8 +68,10 @@ public class Player : MonoBehaviour
             }
 
             if (Input.GetKeyUp(KeyCode.Space) && !isOnGround)     // Player stops pressing the button
+            {
                 jumpCancel = true;
-            UpdateScore();
+            }
+            //UpdateScore();
         }
     }
     private void FixedUpdate()
@@ -91,6 +93,10 @@ public class Player : MonoBehaviour
         if(!alive)
         {
             rigidbody2D.velocity = new Vector2(0, -9.81f);
+        }
+        else
+        {
+            UpdateScore();
         }
     }
     void CheckGround()

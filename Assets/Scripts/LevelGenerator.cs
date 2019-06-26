@@ -34,7 +34,6 @@ public class LevelGenerator : MonoBehaviour
     }
     public void GoToTitle()
     {
-        SceneManager.LoadScene("Title");
-        SceneManager.UnloadSceneAsync("Game");
+        SceneManager.LoadScene(0, LoadSceneMode.Single);
     }
 }
