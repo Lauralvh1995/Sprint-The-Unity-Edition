@@ -11,11 +11,12 @@ public class LevelGenerator : MonoBehaviour
 
     public GameObject startChunk;
     public GameObject startPoint;
-    static int offset;
+    int offset;
     System.Random random = new System.Random();
     // Start is called before the first frame update
     public void Start()
     {
+        offset = 0;
         chunks.Add(startChunk);
         offset = offset + chunkWidth;
     }
@@ -35,5 +36,9 @@ public class LevelGenerator : MonoBehaviour
     public void GoToTitle()
     {
         SceneManager.LoadScene(0, LoadSceneMode.Single);
+    }
+    private void OnDestroy()
+    {
+        chunks.Clear();
     }
 }

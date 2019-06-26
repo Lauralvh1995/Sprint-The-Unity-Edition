@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7923614881769532136}
   - component: {fileID: 3625042978691635818}
   - component: {fileID: 9187397078680015367}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: DeathVolume
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2686,7 +2686,7 @@ GameObject:
   m_Component:
   - component: {fileID: 270938161404534816}
   - component: {fileID: 4018564653232246494}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: bottomHolder
   m_TagString: Untagged
   m_Icon: {fileID: 0}

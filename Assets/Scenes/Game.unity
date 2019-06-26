@@ -239,7 +239,7 @@ GameObject:
   - component: {fileID: 201090727}
   - component: {fileID: 201090728}
   - component: {fileID: 201090729}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: Bounding Box L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
