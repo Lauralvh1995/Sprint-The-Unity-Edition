@@ -9,9 +9,6 @@ public class Player : MonoBehaviour
     public PlayerColor color;
     public Rigidbody2D rigidbody2D;
     public Animator animator;
-    public GameObject ScoreUI;
-    public GameObject finalScore;
-    public GameObject GameOver;
     public GameObject startPoint;
     public LayerMask groundMask;
 
@@ -23,6 +20,9 @@ public class Player : MonoBehaviour
     public bool alive = true;
 
     public float score;
+
+    public string inputAxis;
+    public KeyCode jumpButton;
 
     [SerializeField]
     bool isOnGround = true;
@@ -36,19 +36,22 @@ public class Player : MonoBehaviour
         switch (color)
         {
             case PlayerColor.Green:
-
+                inputAxis = "Horizontal1";
+                jumpButton = KeyCode.W;
                 break;
             case PlayerColor.Blue:
-
-                break;
-            case PlayerColor.Purple:
-
+                inputAxis = "Horizontal2";
+                jumpButton = KeyCode.G;
                 break;
             case PlayerColor.Red:
-
+                inputAxis = "Horizontal3";
+                jumpButton = KeyCode.I;
+                break;
+            case PlayerColor.Purple:
+                inputAxis = "Horizontal4";
+                jumpButton = KeyCode.UpArrow;
                 break;
         }
-        GameOver.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -58,7 +61,7 @@ public class Player : MonoBehaviour
         CheckGround();
         if(alive)
         {
-            if (Input.GetKeyDown(KeyCode.Space) && isOnGround)
+            if (Input.GetKeyDown(jumpButton) && isOnGround)
             {
                 jump = true;
             }
@@ -67,16 +70,15 @@ public class Player : MonoBehaviour
                 jump = false;
             }
 
-            if (Input.GetKeyUp(KeyCode.Space) && !isOnGround)     // Player stops pressing the button
+            if (Input.GetKeyUp(jumpButton) && !isOnGround)     // Player stops pressing the button
             {
                 jumpCancel = true;
             }
-            //UpdateScore();
         }
     }
     private void FixedUpdate()
     {
-        rigidbody2D.velocity = new Vector2(Input.GetAxis("Horizontal") + speed, rigidbody2D.velocity.y);
+        rigidbody2D.velocity = new Vector2(Input.GetAxis(inputAxis) + speed, rigidbody2D.velocity.y);
         if (jump)
         {
             rigidbody2D.velocity = new Vector2(rigidbody2D.velocity.x, jumpHeight);
@@ -107,7 +109,6 @@ public class Player : MonoBehaviour
     void UpdateScore()
     {
         score = Mathf.FloorToInt(transform.position.x - startPoint.transform.position.x);
-        ScoreUI.GetComponent<Text>().text = "Score  "+ score.ToString();
     }
 
     public void SetSpeed(float newSpeed)
@@ -125,8 +126,5 @@ public class Player : MonoBehaviour
         isOnGround = true;
         alive = false;
         animator.SetBool("Dead", true);
-        GameOver.gameObject.SetActive(true);
-        finalScore.GetComponent<Text>().text = "Final Score  " + score;
-        ScoreUI.gameObject.SetActive(false);
     }
 }

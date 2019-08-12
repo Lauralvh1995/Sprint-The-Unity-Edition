@@ -13,14 +13,11 @@ public class Loader : MapEntity
     }
     public override void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "BoundingBox")
+        Debug.Log("Hit the loader");
+        if (loaded == false)
         {
-            Debug.Log("Hit the loader");
-            if (loaded == false)
-            {
-                generator.LoadNewChunk();
-                loaded = true;
-            }
+            generator.LoadNewChunk();
+            loaded = true;
         }
     }
 }
